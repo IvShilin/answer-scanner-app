@@ -1,16 +1,13 @@
-# aurora
+# Test Scanner Aurora App
 
-A new Flutter project.
+## Описание функционала
 
-## Getting Started
+- Авторизация преподавателя (логин, пароль, номер теста)
+- Возможность сделать фотографию теста
+- Измененение правильных ответов теста / добавление правильных ответов на тест
 
-This project is a starting point for a Flutter application.
+## Организация проекта
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Фронтенд (написан на Dart с использованием Flutter)
+- Бэкенд (написан на Python c использованием FastAPI)
+- Модель распознавания (написана на Python с использованием OpenCV)
