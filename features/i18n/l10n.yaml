@@ -1,0 +1,6 @@
+arb-dir: l10n # Директория, где хранятся файлы переводов
+template-arb-file: app_en.arb # Файл-шаблон, где описываются параметры строк
+synthetic-package: false
+output-dir: lib/flutter_gen/gen_l10n
+output-localization-file: app_localizations.dart # Сгенерированный файл локализации
+nullable-getter: false # Доступ к строкам можно получить через no-nullable-метод of(context)

@@ -1,0 +1,16 @@
+include: package:extra_pedantic/analysis_options.yaml
+
+analyzer:
+  language:
+    strict-raw-types: false
+
+linter:
+  rules:
+    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
+    prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    prefer_final_parameters: false
+    sort_pub_dependencies: false
+    prefer_expression_function_bodies: true
+
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options

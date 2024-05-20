@@ -1,0 +1,33 @@
+name: i18n
+description: "Localization package."
+
+publish_to: 'none'
+
+version: 1.0.0
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+  extra_pedantic: ^4.0.0
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.2
+  build_runner: ^2.4.9
+
+
+flutter:
+  generate: true
+  uses-material-design: true
