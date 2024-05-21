@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:i18n/i18n.dart';
-import 'package:topg/topg.dart';
+import 'package:ui_application/ui_application.dart';
 
-import 'src/di/di.dart';
-import 'src/features/camera/manager.dart';
-import 'src/features/log/log.dart';
-import 'src/routes/app_router/app_router.dart';
+import 'src/camera/manager.dart';
+import 'src/dependency_injection/di.dart';
+import 'src/log/log.dart';
+import 'src/routes/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,11 +21,11 @@ void main() async {
   } on CameraException catch (e) {
     getIt.get<Log>().e('Error: ${e.code}\n${e.description}');
   }
-  await TopG.init();
+  await UIApplication.init();
   await ScarlettLocalization.init();
   runApp(
     const ProviderScope(
-      child: TopG(
+      child: UIApplication(
         child: PhotoTestApp(),
       ),
     ),
@@ -48,7 +48,7 @@ class _PhotoTestAppState extends State<PhotoTestApp> {
       DeviceOrientation.portraitDown,
     ]));
 
-    final theme = TopGTheme.of(context);
+    final theme = UIApplicationTheme.of(context);
     final colorTheme = theme.colorScheme;
 
     return ScarlettLocalization(
